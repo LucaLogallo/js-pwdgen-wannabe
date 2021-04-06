@@ -3,6 +3,7 @@ var Cognome;
 var ColorePreferito;
 var PasswordGenerata;
 var GrandezzaTesto;
+var ColoreTesto;
 
 Nome = prompt('Inserisci il nome!');
 Cognome = prompt('Inserisci il cognome!');
@@ -16,7 +17,11 @@ console.log(PasswordGenerata);
 function FormattazioneTesto(selectTag) {
   GrandezzaTesto = selectTag.options[selectTag.selectedIndex].text;
   document.getElementById("PasswordGenerator").style.fontSize = GrandezzaTesto;
-  document.getElementById("PasswordGenerator").style.color = "red";
+}
+
+function ColoreTesto(selectTag) {
+  ColoreTesto = selectTag.options[selectTag.selectedIndex].text;
+  document.getElementById("PasswordGenerator").style.color = ColoreTesto;
 }
 
 /* document.getElementById("PasswordGenerator").style.color = "red";
